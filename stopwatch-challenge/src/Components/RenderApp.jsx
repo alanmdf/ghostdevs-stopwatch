@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-import Timer from './Components/Timer';
-import Header from './Components/Header';
-import ActionButtons from './Components/ActionButtons';
-import SetupButtons from './Components/SetupButtons';
-
-import './App.css';
+import Timer from './Timer';
+import Header from './Header';
+import ActionButtons from './ActionButtons';
+import SetupButtons from './SetupButtons';
 
 class RenderApp extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       timerSecond: 5,
       timerMin: 0,
     };
+
     this.changeTimer = this.changeTimer.bind(this);
     this.finishMinutes = this.finishMinutes.bind(this);
+    this.setStandardTimer = this.setStandardTimer.bind(this);
   }
 
   componentDidMount() {
@@ -46,15 +47,24 @@ class RenderApp extends Component {
     }, ONE_SECOND);
   }
 
+  async setStandardTimer(min) {
+    await this.setState({
+      timerSecond: 0,
+      timerMin: min,
+    })
+    this.changeTimer();
+  }
+
   render() {
     const { timerSecond, timerMin } = this.state;
+    
     return (
       <main>
         <Header />
         <section className="main-section">
           <ActionButtons />
           <Timer timerSecond={ timerSecond } timerMin={ timerMin } />
-          <SetupButtons />
+          <SetupButtons setStandardTimer={ this.setStandardTimer } />
         </section>
       </main>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import RenderApp from './RenderApp';
+import RenderApp from './Components/RenderApp';
 
 import './App.css';
 

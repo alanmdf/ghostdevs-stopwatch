@@ -4,21 +4,27 @@ class SetupButtons extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  hadleClick() {}
+  handleClick() {
+    console.log();
+  }
 
   render() {
+    const { setStandardTimer } = this.props;
+
     return (
       <div className="setup-div">
-        <div className="setup-btns-div">
-          <button onClick={ this.hadleClick } type="button">3:00</button>
-          <button onClick={ this.hadleClick } type="button">5:00</button>
-          <button onClick={ this.hadleClick } type="button">10:00</button>
+        <div className="setup-btns-div" >
+          <button onClick={ () => setStandardTimer(3) } type="button">03:00</button>
+          <button onClick={ () => setStandardTimer(5) } type="button">05:00</button>
+          <button onClick={ () => setStandardTimer(10) } type="button">10:00</button>
         </div>
         <form className="customize-timer-div">
           <input type="time" />
-          <button type="button" onClick={ this.hadleClick }>Ok</button>
+          <button type="button" onClick={ this.handleClick }>Ok</button>
         </form>
       </div>
     );
