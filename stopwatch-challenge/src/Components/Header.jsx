@@ -5,7 +5,13 @@ class Header extends Component {
   render() {
     return (
       <header className="app-header">
-        👻 GhostDevs Trybe Stopwatch 👻
+        <i className="Icons-Header">
+          {icons.menu}
+        </i>
+        <p>👻 GhostDevs Trybe Stopwatch 👻</p>
+        <i className="Icons-Header settings">
+          {icons.settings}
+        </i>
       </header>
     );
   }

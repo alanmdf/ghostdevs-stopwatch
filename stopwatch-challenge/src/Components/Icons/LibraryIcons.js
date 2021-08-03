@@ -4,7 +4,7 @@ import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const icons = {
-  setigins: <FontAwesomeIcon icon={ faCog } />,
+  settings: <FontAwesomeIcon icon={ faCog } />,
   menu: <FontAwesomeIcon icon={ faBars } />,
   gitHub: <FontAwesomeIcon icon={ faGithubAlt } />,
   linkedin: <FontAwesomeIcon icon={ faLinkedinIn } />,

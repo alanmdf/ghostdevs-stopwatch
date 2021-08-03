@@ -1,3 +1,25 @@
 header {
-  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+}
+
+.Icons-Header {
+  font-size: 30px;
+}
+
+.settings {
+  animation: myRotation 5s infinite linear;
+}
+
+@keyframes myRotation {
+  to {
+    transform: rotate(180deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
 }
