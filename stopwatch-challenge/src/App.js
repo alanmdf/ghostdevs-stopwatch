@@ -12,9 +12,9 @@ function App() {
         👻 GhostDevs Trybe Stopwatch 👻
       </header>
       <section className="main-section">
-        <ActionButtons className="action-buttons" />
-        <Timer className="timer-div" />
-        <SetupButtons className="setup-div" />
+        <ActionButtons />
+        <Timer />
+        <SetupButtons />
       </section>
     </main>
   );
