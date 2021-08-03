@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Timer from './Timer';
 import Header from './Header';
 import ActionButtons from './ActionButtons';
@@ -9,33 +10,41 @@ class RenderApp extends Component {
     super(props);
 
     this.state = {
-      timerSecond: 5,
+      timerSecond: 0,
       timerMin: 0,
     };
 
     this.changeTimer = this.changeTimer.bind(this);
     this.finishMinutes = this.finishMinutes.bind(this);
     this.setStandardTimer = this.setStandardTimer.bind(this);
+    this.checkZeros = this.checkZeros.bind(this);
+    this.pauseClock = this.pauseClock.bind(this);
+    this.stopClock = this.stopClock.bind(this);
   }
 
   componentDidMount() {
     this.changeTimer();
+    this.checkZeros();
   }
 
   componentDidUpdate() {
+    this.checkZeros();
+  }
+
+  setStandardTimer(minutes) {
+    this.setState({
+      timerSecond: 0,
+      timerMin: minutes,
+    });
+  }
+
+  checkZeros() {
     const { timerSecond, timerMin } = this.state;
     if (timerSecond < 0 && timerMin >= 1) {
       this.finishMinutes();
     } else if (timerSecond === 0 && timerMin < 1) {
       clearInterval(this.interval);
     }
-  }
-
-  finishMinutes() {
-    this.setState((prevState) => ({
-      timerSecond: 59,
-      timerMin: prevState.timerMin - 1,
-    }));
   }
 
   changeTimer() {
@@ -47,22 +56,33 @@ class RenderApp extends Component {
     }, ONE_SECOND);
   }
 
-  async setStandardTimer(min) {
-    await this.setState({
-      timerSecond: 0,
-      timerMin: min,
-    })
-    this.changeTimer();
+  finishMinutes() {
+    this.setState((prevState) => ({
+      timerSecond: 59,
+      timerMin: prevState.timerMin - 1,
+    }));
+  }
+
+  pauseClock() {
+    clearInterval(this.interval);
+  }
+
+  stopClock() {
+    this.setState({ timerSecond: 0, timerMin: 0 });
   }
 
   render() {
     const { timerSecond, timerMin } = this.state;
-    
+
     return (
       <main>
         <Header />
         <section className="main-section">
-          <ActionButtons />
+          <ActionButtons
+            startClock={ this.changeTimer }
+            pauseClock={ this.pauseClock }
+            stopClock={ this.stopClock }
+          />
           <Timer timerSecond={ timerSecond } timerMin={ timerMin } />
           <SetupButtons setStandardTimer={ this.setStandardTimer } />
         </section>
