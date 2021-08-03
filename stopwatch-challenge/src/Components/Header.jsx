@@ -6,7 +6,6 @@ class Header extends Component {
     return (
       <header className="app-header">
         👻 GhostDevs Trybe Stopwatch 👻
-        {icons.setigins}
       </header>
     );
   }

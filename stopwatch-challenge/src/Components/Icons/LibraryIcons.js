@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const icons = {
   setigins: <FontAwesomeIcon icon={ faCog } />,
-  menu: faBars,
-  gitHub: faGithubAlt,
-  linkedin: faLinkedinIn,
+  menu: <FontAwesomeIcon icon={ faBars } />,
+  gitHub: <FontAwesomeIcon icon={ faGithubAlt } />,
+  linkedin: <FontAwesomeIcon icon={ faLinkedinIn } />,
 };
 
 export default icons;
