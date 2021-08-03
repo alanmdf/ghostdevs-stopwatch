@@ -11,7 +11,7 @@ class SetupButtons extends Component {
   render() {
     return (
       <div className="setup-div">
-        <div className="setup-btns-div" >
+        <div className="setup-btns-div">
           <button onClick={ this.hadleClick } type="button">3:00</button>
           <button onClick={ this.hadleClick } type="button">5:00</button>
           <button onClick={ this.hadleClick } type="button">10:00</button>
