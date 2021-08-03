@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Timer from './Components/Temporizador';
 import ActionButtons from './Components/ActionButtons';
+import SetupButtons from './Components/SetupButtons';
 
 import './App.css';
 
@@ -14,11 +14,8 @@ function App() {
       <section className="main-section">
         <ActionButtons className="action-buttons" />
         <div className="timer-div">
-
         </div>
-        <div className="setup-div">
-
-        </div>
+        <SetupButtons className="setup-div" />
       </section>
     </main>
   );
