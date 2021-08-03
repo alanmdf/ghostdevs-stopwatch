@@ -7,7 +7,7 @@ class ActionButtons extends Component {
 
   render() {
     return (
-      <div>
+      <div className="action-btns-div">
         <button type='button'>Start</button>
         <button type='button'>Pause</button>
         <button type='button'>Stop</button>

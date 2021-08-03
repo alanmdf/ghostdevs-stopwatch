@@ -11,9 +11,9 @@ function App() {
     <main>
       <Header />
       <section className="main-section">
-        <ActionButtons className="action-buttons" />
-        <Timer className="timer-div" />
-        <SetupButtons className="setup-div" />
+        <ActionButtons />
+        <Timer />
+        <SetupButtons />
       </section>
     </main>
   );

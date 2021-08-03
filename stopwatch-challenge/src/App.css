@@ -23,3 +23,43 @@ header {
     transform: rotate(360deg);
   }
 }
+
+.main-section {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.action-btns-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 15%;
+  width: 25%;
+  background-color: red;
+}
+
+.timer-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 50%;
+  background-color: yellow;
+}
+
+.setup-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 35%;
+  width: 40%;
+  background-color: green;
+}
+
+.customize-timer-div {
+  margin-top: 5%;
+}
