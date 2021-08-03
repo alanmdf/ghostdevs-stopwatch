@@ -1,5 +1,6 @@
 import React from 'react';
 import Timer from './Components/Timer';
+import Header from './Components/Header';
 import ActionButtons from './Components/ActionButtons';
 import SetupButtons from './Components/SetupButtons';
 
@@ -8,9 +9,7 @@ import './App.css';
 function App() {
   return (
     <main>
-      <header className="app-header">
-        👻 GhostDevs Trybe Stopwatch 👻
-      </header>
+      <Header />
       <section className="main-section">
         <ActionButtons className="action-buttons" />
         <Timer className="timer-div" />
