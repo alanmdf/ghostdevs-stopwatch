@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      Cronômetro
+      Cronômetro - Alan e João Victor
     </div>
   );
 }
