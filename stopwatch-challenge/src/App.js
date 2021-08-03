@@ -3,9 +3,21 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      Cronômetro - Alan e João Victor
-    </div>
+    <main>
+      <header className="app-header">
+      </header>
+      <section className="main-section">
+        <div className="action-buttons-div">
+
+        </div>
+        <div className="timer-div">
+
+        </div>
+        <div className="setup-div">
+
+        </div>
+      </section>
+    </main>
   );
 }
 
