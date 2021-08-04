@@ -17,14 +17,11 @@ class RenderApp extends Component {
     this.changeTimer = this.changeTimer.bind(this);
     this.finishMinutes = this.finishMinutes.bind(this);
     this.setStandardTimer = this.setStandardTimer.bind(this);
+    this.setCustomTimer = this.setCustomTimer.bind(this);
     this.checkZeros = this.checkZeros.bind(this);
+    this.startClock = this.startClock.bind(this);
     this.pauseClock = this.pauseClock.bind(this);
     this.stopClock = this.stopClock.bind(this);
-  }
-
-  componentDidMount() {
-    this.changeTimer();
-    this.checkZeros();
   }
 
   componentDidUpdate() {
@@ -35,6 +32,13 @@ class RenderApp extends Component {
     this.setState({
       timerSecond: 0,
       timerMin: minutes,
+    });
+  }
+
+  setCustomTimer(min, sec) {
+    this.setState({
+      timerSecond: sec,
+      timerMin: min,
     });
   }
 
@@ -63,6 +67,13 @@ class RenderApp extends Component {
     }));
   }
 
+  startClock() {
+    const { timerSecond, timerMin } = this.state;
+    if (timerMin === 0 && timerSecond === 0) {
+      return null;
+    } this.changeTimer();
+  }
+
   pauseClock() {
     clearInterval(this.interval);
   }
@@ -79,12 +90,15 @@ class RenderApp extends Component {
         <Header />
         <section className="main-section">
           <ActionButtons
-            startClock={ this.changeTimer }
+            startClock={ this.startClock }
             pauseClock={ this.pauseClock }
             stopClock={ this.stopClock }
           />
           <Timer timerSecond={ timerSecond } timerMin={ timerMin } />
-          <SetupButtons setStandardTimer={ this.setStandardTimer } />
+          <SetupButtons
+            setStandardTimer={ this.setStandardTimer }
+            setCustomTimer={ this.setCustomTimer }
+          />
         </section>
       </main>
     );

@@ -64,4 +64,10 @@ header {
 
 .customize-timer-div {
   margin-top: 5%;
+  display: flex;
+  width: 5%;
+}
+
+.input-minutes, .input-seconds {
+  width: 10vh;
 }

@@ -4,17 +4,25 @@ import PropTypes from 'prop-types';
 class SetupButtons extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
 
-    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      customMin: 0,
+      customSec: 0,
+    };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleClick() {
-    console.log();
+  handleChange({ target }) {
+    console.log(target.name, target.value);
+    this.setState({
+      [target.name]: Number(target.value),
+    });
   }
 
   render() {
-    const { setStandardTimer } = this.props;
+    const { setStandardTimer, setCustomTimer } = this.props;
+    const { customMin, customSec } = this.state;
     const THREE_MINUTES = 3;
     const FIVE_MINUTES = 5;
     const TEN_MINUTES = 10;
@@ -42,8 +50,26 @@ class SetupButtons extends Component {
           </button>
         </div>
         <form className="customize-timer-div">
-          <input type="time" />
-          <button type="button" onClick={ this.handleClick }>Ok</button>
+          <input
+            type="text"
+            name="customMin"
+            className="input-minutes"
+            onChange={ this.handleChange }
+            maxLength="2"
+          />
+          <input
+            type="text"
+            name="customSec"
+            className="input-seconds"
+            onChange={ this.handleChange }
+            maxLength="2"
+          />
+          <button
+            type="button"
+            onClick={ () => setCustomTimer(customMin, customSec) }
+          >
+            Ok
+          </button>
         </form>
       </div>
     );
@@ -52,6 +78,7 @@ class SetupButtons extends Component {
 
 SetupButtons.propTypes = {
   setStandardTimer: PropTypes.func.isRequired,
+  setCustomTimer: PropTypes.func.isRequired,
 };
 
 export default SetupButtons;
