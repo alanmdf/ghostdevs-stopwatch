@@ -43,6 +43,11 @@ header {
   background-color: red;
 }
 
+.action-btns-div button {
+  border: none;
+  background-color: inherit;
+}
+
 .timer-div {
   display: flex;
   align-items: center;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import icons from './Icons/LibraryIcons';
 
 class ActionButtons extends Component {
   render() {
@@ -7,9 +8,15 @@ class ActionButtons extends Component {
 
     return (
       <div className="action-btns-div">
-        <button type="button" onClick={ startClock }>Play</button>
-        <button type="button" onClick={ pauseClock }>Pause</button>
-        <button type="button" onClick={ stopClock }>Stop</button>
+        <button type="button" onClick={ startClock }>
+          <i className="fs-3">{icons.play}</i>
+        </button>
+        <button type="button" onClick={ pauseClock }>
+          <i className="fs-3">{icons.pause}</i>
+        </button>
+        <button type="button" onClick={ stopClock }>
+          <i className="fs-3">{icons.stop}</i>
+        </button>
       </div>
     );
   }
