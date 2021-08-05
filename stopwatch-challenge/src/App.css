@@ -1,4 +1,5 @@
-* {font-size: 25px;}
+* {font-size: 25px}
+body {background-color: #303030;}
 
 header {
   margin: 15px;
@@ -40,26 +41,25 @@ header {
   align-items: center;
   height: 15%;
   width: 25%;
-  background-color: red;
 }
 
 .timer-div {
+  font-family: 'Orbitron', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50%;
   width: 50%;
-  background-color: yellow;
 }
 
 .setup-div {
+  font-family: 'Orbitron', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 35%;
   width: 40%;
-  background-color: green;
 }
 
 .customize-timer-div {
