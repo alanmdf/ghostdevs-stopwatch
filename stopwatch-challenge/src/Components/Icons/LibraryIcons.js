@@ -1,7 +1,7 @@
 import React from 'react';
 import { faCog, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import { faPlayCircle } from '@fortawesome/free-regular-svg-icons';
+import { faPlayCircle, faPauseCircle, faStopCircle } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const icons = {
@@ -10,6 +10,9 @@ const icons = {
   gitHub: <FontAwesomeIcon icon={ faGithubAlt } />,
   linkedin: <FontAwesomeIcon icon={ faLinkedinIn } />,
   play: <FontAwesomeIcon icon={ faPlayCircle } />,
+  pause: <FontAwesomeIcon icon={ faPauseCircle } />,
+  stop: <FontAwesomeIcon icon={ faStopCircle } />,
+
 };
 
 export default icons;

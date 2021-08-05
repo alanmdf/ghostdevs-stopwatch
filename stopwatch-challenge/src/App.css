@@ -43,6 +43,11 @@ header {
   width: 25%;
 }
 
+.action-btns-div button {
+  border: none;
+  background-color: inherit;
+}
+
 .timer-div {
   font-family: 'Orbitron', sans-serif;
   display: flex;
