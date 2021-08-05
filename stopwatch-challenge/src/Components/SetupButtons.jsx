@@ -15,6 +15,8 @@ class SetupButtons extends Component {
 
   handleChange({ target }) {
     console.log(target.name, target.value);
+    const LIMIT_TIMER = 59;
+    if (target.value > LIMIT_TIMER) { target.value = LIMIT_TIMER; }
     this.setState({
       [target.name]: Number(target.value),
     });
