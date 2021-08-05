@@ -32,21 +32,21 @@ class SetupButtons extends Component {
       <div className="setup-div">
         <div className="setup-btns-div">
           <button
-            className="mx-2 "
+            className="mx-2"
             onClick={ () => setStandardTimer(THREE_MINUTES) }
             type="button"
           >
             03:00
           </button>
           <button
-            className="mx-2 "
+            className="mx-2"
             onClick={ () => setStandardTimer(FIVE_MINUTES) }
             type="button"
           >
             05:00
           </button>
           <button
-            className="mx-2 "
+            className="mx-2"
             onClick={ () => setStandardTimer(TEN_MINUTES) }
             type="button"
           >
