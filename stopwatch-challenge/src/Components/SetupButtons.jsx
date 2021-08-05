@@ -14,7 +14,6 @@ class SetupButtons extends Component {
   }
 
   handleChange({ target }) {
-    console.log(target.name, target.value);
     const LIMIT_TIMER = 59;
     if (target.value > LIMIT_TIMER) { target.value = LIMIT_TIMER; }
     this.setState({
@@ -33,18 +32,21 @@ class SetupButtons extends Component {
       <div className="setup-div">
         <div className="setup-btns-div">
           <button
+            className="mx-2 "
             onClick={ () => setStandardTimer(THREE_MINUTES) }
             type="button"
           >
             03:00
           </button>
           <button
+            className="mx-2 "
             onClick={ () => setStandardTimer(FIVE_MINUTES) }
             type="button"
           >
             05:00
           </button>
           <button
+            className="mx-2 "
             onClick={ () => setStandardTimer(TEN_MINUTES) }
             type="button"
           >
@@ -56,6 +58,7 @@ class SetupButtons extends Component {
             type="text"
             name="customMin"
             className="input-minutes"
+            placeholder="Minutes"
             onChange={ this.handleChange }
             maxLength="2"
           />
@@ -63,6 +66,7 @@ class SetupButtons extends Component {
             type="text"
             name="customSec"
             className="input-seconds"
+            placeholder="Seconds"
             onChange={ this.handleChange }
             maxLength="2"
           />
