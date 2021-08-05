@@ -11,11 +11,11 @@ class Timer extends Component {
 
     return (
       <div className="timer-div">
-        <span className="fs-1">
+        <span className="fs-1 text-white">
           {timerMin}
           :
         </span>
-        <span className="fs-1">
+        <span className="fs-1 text-white">
           {timerSecond}
         </span>
       </div>

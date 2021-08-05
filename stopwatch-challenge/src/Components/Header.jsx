@@ -8,7 +8,7 @@ class Header extends Component {
         <i className="Icons-Header">
           {icons.menu}
         </i>
-        <p>👻 GhostDevs Trybe Stopwatch 👻</p>
+        <p className="text-white">👻 GhostDevs Trybe Stopwatch 👻</p>
         <i className="Icons-Header settings">
           {icons.settings}
         </i>

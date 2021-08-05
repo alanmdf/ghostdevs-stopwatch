@@ -12,6 +12,7 @@ header {
 
 .Icons-Header {
   font-size: 30px;
+  color: white;
 }
 
 .settings {
@@ -43,10 +44,6 @@ header {
   width: 25%;
 }
 
-.action-btns-div button {
-  border: none;
-  background-color: inherit;
-}
 
 .timer-div {
   font-family: 'Orbitron', sans-serif;
@@ -64,15 +61,16 @@ header {
   align-items: center;
   justify-content: center;
   height: 35%;
-  width: 40%;
+  min-width: 40%;
 }
 
 .customize-timer-div {
   margin-top: 5%;
   display: flex;
-  width: 5%;
+  width: 70%;
 }
 
-.input-minutes, .input-seconds {
-  width: 10vh;
+.width {
+  width: 200px;
 }
+

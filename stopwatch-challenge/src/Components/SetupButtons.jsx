@@ -32,21 +32,21 @@ class SetupButtons extends Component {
       <div className="setup-div">
         <div className="setup-btns-div">
           <button
-            className="mx-2"
+            className="mx-2 btn btn-secondary btn-lg"
             onClick={ () => setStandardTimer(THREE_MINUTES) }
             type="button"
           >
             03:00
           </button>
           <button
-            className="mx-2"
+            className="mx-2 btn btn-secondary btn-lg"
             onClick={ () => setStandardTimer(FIVE_MINUTES) }
             type="button"
           >
             05:00
           </button>
           <button
-            className="mx-2"
+            className="mx-2 btn btn-secondary btn-lg"
             onClick={ () => setStandardTimer(TEN_MINUTES) }
             type="button"
           >
@@ -54,33 +54,43 @@ class SetupButtons extends Component {
           </button>
         </div>
         <form className="customize-timer-div">
-          <input
-            type="text"
-            name="customMin"
-            className="input-minutes"
-            placeholder="Minutes"
-            onChange={ this.handleChange }
-            maxLength="2"
-          />
-          <input
-            type="text"
-            name="customSec"
-            className="input-seconds"
-            placeholder="Seconds"
-            onChange={ this.handleChange }
-            maxLength="2"
-          />
-          <button
-            type="button"
-            onClick={ () => setCustomTimer(customMin, customSec) }
-          >
-            Ok
-          </button>
+          <div className="input-group w-3">
+            <span className="input-group-text fs-5">Timer</span>
+            <input
+              type="text"
+              name="customMin"
+              className="form-control fs-3"
+              placeholder="Minutes"
+              onChange={ this.handleChange }
+              maxLength="2"
+            />
+            <input
+              type="text"
+              name="customSec"
+              className="form-control fs-3"
+              placeholder="Seconds"
+              onChange={ this.handleChange }
+              maxLength="2"
+            />
+            <button
+              type="button"
+              className="btn btn-secondary btn-lg width fs-4"
+              onClick={ () => setCustomTimer(customMin, customSec) }
+            >
+              Ok
+            </button>
+          </div>
         </form>
       </div>
     );
   }
 }
+
+/* <div class="input-group">
+  <span class="input-group-text">First and last name</span>
+  <input type="text" aria-label="First name" class="form-control">
+  <input type="text" aria-label="Last name" class="form-control">
+</div> */
 
 SetupButtons.propTypes = {
   setStandardTimer: PropTypes.func.isRequired,

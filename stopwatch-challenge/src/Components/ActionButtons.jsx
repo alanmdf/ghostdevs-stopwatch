@@ -8,14 +8,26 @@ class ActionButtons extends Component {
 
     return (
       <div className="action-btns-div">
-        <button type="button" onClick={ startClock }>
-          <i className="fs-3">{icons.play}</i>
+        <button
+          className="mx-2 px-2 py-1 btn btn-secondary btn-lg"
+          type="button"
+          onClick={ startClock }
+        >
+          <i className="fs-3 text-white icons">{icons.play}</i>
         </button>
-        <button type="button" onClick={ pauseClock }>
-          <i className="fs-3">{icons.pause}</i>
+        <button
+          className="mx-2 px-2 py-1 btn btn-secondary btn-lg"
+          type="button"
+          onClick={ pauseClock }
+        >
+          <i className="fs-3 text-white icons">{icons.pause}</i>
         </button>
-        <button type="button" onClick={ stopClock }>
-          <i className="fs-3">{icons.stop}</i>
+        <button
+          className="mx-2 px-2 py-1 btn btn-secondary btn-lg"
+          type="button"
+          onClick={ stopClock }
+        >
+          <i className="fs-3 text-white icons">{icons.stop}</i>
         </button>
       </div>
     );
