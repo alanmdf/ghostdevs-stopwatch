@@ -80,6 +80,7 @@ class RenderApp extends Component {
 
   stopClock() {
     this.setState({ timerSecond: 0, timerMin: 0 });
+    clearInterval(this.interval);
   }
 
   render() {
