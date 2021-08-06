@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import icons from './Icons/LibraryIcons';
+import IconFantasma from './Fantamas.gif';
 
 class Header extends Component {
   render() {
@@ -8,7 +9,11 @@ class Header extends Component {
         <i className="Icons-Header">
           {icons.menu}
         </i>
-        <p className="text-white">👻 GhostDevs Trybe Stopwatch 👻</p>
+        <p className="text-white">
+          <img src={ IconFantasma } alt="" className="icons-fantasma" />
+          GhostDevs Trybe Stopwatch
+          <img src={ IconFantasma } alt="" className="icons-fantasma" />
+        </p>
         <i className="Icons-Header settings">
           {icons.settings}
         </i>

@@ -5,6 +5,8 @@ import Timer from './Timer';
 import Header from './Header';
 import ActionButtons from './ActionButtons';
 import SetupButtons from './SetupButtons';
+import IconFantasma from './Fantamas.gif';
+import TimerComplete from './TimerComplete';
 
 class RenderApp extends Component {
   constructor(props) {
@@ -15,6 +17,7 @@ class RenderApp extends Component {
       timerMin: 0,
       totalSecond: 0,
       progress: 0,
+      pause: false,
     };
 
     this.changeTimer = this.changeTimer.bind(this);
@@ -56,7 +59,6 @@ class RenderApp extends Component {
     const porcentagem = totalSecond - (timerMin * ONE_MINUTE + timerSecond);
     const total = (porcentagem / totalSecond) * 100;
     const totalTrat = (total >= 0) ? Math.round(total) : 0;
-
     this.setState({ progress: totalTrat });
   }
 
@@ -87,9 +89,12 @@ class RenderApp extends Component {
 
   startClock() {
     const ONE_MINUTE = 60;
-    const { timerSecond, timerMin } = this.state;
-    const totalProgress = timerMin * ONE_MINUTE + timerSecond;
-    this.setState({ totalSecond: totalProgress });
+    const { timerSecond, timerMin, pause } = this.state;
+    if (pause === false) {
+      const totalProgress = timerMin * ONE_MINUTE + timerSecond;
+      this.setState({ totalSecond: totalProgress });
+    }
+    this.setState({ pause: false });
     if (timerMin === 0 && timerSecond === 0) {
       return null;
     }
@@ -98,24 +103,33 @@ class RenderApp extends Component {
 
   pauseClock() {
     clearInterval(this.interval);
-    console.log(this);
+    this.setState({ pause: true });
   }
 
   stopClock() {
-    this.setState({ timerSecond: 0, timerMin: 0, totalSecond: 0 });
-    this.total = 0;
+    this.setState({ timerSecond: 0, timerMin: 0, totalSecond: 0, progress: 0 });
     clearInterval(this.interval);
   }
 
   render() {
     const { timerSecond, timerMin, progress } = this.state;
+    const imageFantamas = <img src={ IconFantasma } alt="" className="icons-fantasma" />;
+    let componeteTimer = (
+      <Timer
+        timerSecond={ timerSecond }
+        timerMin={ timerMin }
+      />
+    );
+    if (progress >= 100) {
+      componeteTimer = <TimerComplete />;
+    }
 
     return (
       <main>
         <ProgressBar
           className="bar-progress"
           variant="info"
-          label={ `${progress}%` }
+          label={ imageFantamas }
           animated
           now={ progress }
         />
@@ -126,10 +140,7 @@ class RenderApp extends Component {
             pauseClock={ this.pauseClock }
             stopClock={ this.stopClock }
           />
-          <Timer
-            timerSecond={ timerSecond }
-            timerMin={ timerMin }
-          />
+          {componeteTimer}
           <SetupButtons
             setStandardTimer={ this.setStandardTimer }
             setCustomTimer={ this.setCustomTimer }
