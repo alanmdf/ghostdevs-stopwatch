@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import { ProgressBar } from 'react-bootstrap';
 import Timer from './Timer';
 import Header from './Header';
 import ActionButtons from './ActionButtons';
@@ -12,6 +13,8 @@ class RenderApp extends Component {
     this.state = {
       timerSecond: 0,
       timerMin: 0,
+      totalSecond: 0,
+      progress: 0,
     };
 
     this.changeTimer = this.changeTimer.bind(this);
@@ -22,10 +25,13 @@ class RenderApp extends Component {
     this.startClock = this.startClock.bind(this);
     this.pauseClock = this.pauseClock.bind(this);
     this.stopClock = this.stopClock.bind(this);
+    this.updateProgress = this.updateProgress.bind(this);
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(_, PrevState) {
+    const { timerSecond } = this.state;
     this.checkZeros();
+    if (PrevState.timerSecond !== timerSecond) { this.updateProgress(); }
   }
 
   setStandardTimer(minutes) {
@@ -40,6 +46,14 @@ class RenderApp extends Component {
       timerSecond: sec,
       timerMin: min,
     });
+  }
+
+  updateProgress() {
+    const { timerSecond, timerMin, totalSecond } = this.state;
+    const porcentagem = totalSecond - (timerMin * 60 + timerSecond);
+    const total = (porcentagem / totalSecond) * 100;
+    const totalTrat = (total >= 0) ? total : 0;
+    this.setState({ progress: totalTrat });
   }
 
   checkZeros() {
@@ -69,25 +83,31 @@ class RenderApp extends Component {
 
   startClock() {
     const { timerSecond, timerMin } = this.state;
+    const totalProgress = timerMin * 60 + timerSecond;
+    this.setState({ totalSecond: totalProgress });
     if (timerMin === 0 && timerSecond === 0) {
       return null;
-    } this.changeTimer();
+    }
+    this.changeTimer();
   }
 
   pauseClock() {
     clearInterval(this.interval);
+    console.log(this);
   }
 
   stopClock() {
-    this.setState({ timerSecond: 0, timerMin: 0 });
+    this.setState({ timerSecond: 0, timerMin: 0, totalSecond: 0 });
+    this.total = 0;
     clearInterval(this.interval);
   }
 
   render() {
-    const { timerSecond, timerMin } = this.state;
+    const { timerSecond, timerMin, progress } = this.state;
 
     return (
       <main>
+        <ProgressBar className="bar-progress" variant="info" animated now={ progress } />
         <Header />
         <section className="main-section">
           <ActionButtons
@@ -95,7 +115,10 @@ class RenderApp extends Component {
             pauseClock={ this.pauseClock }
             stopClock={ this.stopClock }
           />
-          <Timer timerSecond={ timerSecond } timerMin={ timerMin } />
+          <Timer
+            timerSecond={ timerSecond }
+            timerMin={ timerMin }
+          />
           <SetupButtons
             setStandardTimer={ this.setStandardTimer }
             setCustomTimer={ this.setCustomTimer }
