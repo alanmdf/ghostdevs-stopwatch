@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/ghostdevs-stopwatch/static/css/main.b1c06788.chunk.css",
-    "main.js": "/ghostdevs-stopwatch/static/js/main.18c85ea0.chunk.js",
-    "main.js.map": "/ghostdevs-stopwatch/static/js/main.18c85ea0.chunk.js.map",
-    "runtime-main.js": "/ghostdevs-stopwatch/static/js/runtime-main.0c556d05.js",
-    "runtime-main.js.map": "/ghostdevs-stopwatch/static/js/runtime-main.0c556d05.js.map",
-    "static/js/2.b92e131d.chunk.js": "/ghostdevs-stopwatch/static/js/2.b92e131d.chunk.js",
-    "static/js/2.b92e131d.chunk.js.map": "/ghostdevs-stopwatch/static/js/2.b92e131d.chunk.js.map",
-    "static/js/3.0e02dc2b.chunk.js": "/ghostdevs-stopwatch/static/js/3.0e02dc2b.chunk.js",
-    "static/js/3.0e02dc2b.chunk.js.map": "/ghostdevs-stopwatch/static/js/3.0e02dc2b.chunk.js.map",
+    "main.css": "/ghostdevs-stopwatch/static/css/main.95482fc2.chunk.css",
+    "main.js": "/ghostdevs-stopwatch/static/js/main.50b5a36f.chunk.js",
+    "main.js.map": "/ghostdevs-stopwatch/static/js/main.50b5a36f.chunk.js.map",
+    "runtime-main.js": "/ghostdevs-stopwatch/static/js/runtime-main.7720a033.js",
+    "runtime-main.js.map": "/ghostdevs-stopwatch/static/js/runtime-main.7720a033.js.map",
+    "static/js/2.cd30b91b.chunk.js": "/ghostdevs-stopwatch/static/js/2.cd30b91b.chunk.js",
+    "static/js/2.cd30b91b.chunk.js.map": "/ghostdevs-stopwatch/static/js/2.cd30b91b.chunk.js.map",
+    "static/js/3.19547595.chunk.js": "/ghostdevs-stopwatch/static/js/3.19547595.chunk.js",
+    "static/js/3.19547595.chunk.js.map": "/ghostdevs-stopwatch/static/js/3.19547595.chunk.js.map",
     "index.html": "/ghostdevs-stopwatch/index.html",
-    "static/css/main.b1c06788.chunk.css.map": "/ghostdevs-stopwatch/static/css/main.b1c06788.chunk.css.map",
-    "static/js/2.b92e131d.chunk.js.LICENSE.txt": "/ghostdevs-stopwatch/static/js/2.b92e131d.chunk.js.LICENSE.txt"
+    "static/css/main.95482fc2.chunk.css.map": "/ghostdevs-stopwatch/static/css/main.95482fc2.chunk.css.map",
+    "static/js/2.cd30b91b.chunk.js.LICENSE.txt": "/ghostdevs-stopwatch/static/js/2.cd30b91b.chunk.js.LICENSE.txt",
+    "static/media/Fantamas.af9d75df.gif": "/ghostdevs-stopwatch/static/media/Fantamas.af9d75df.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.0c556d05.js",
-    "static/js/2.b92e131d.chunk.js",
-    "static/css/main.b1c06788.chunk.css",
-    "static/js/main.18c85ea0.chunk.js"
+    "static/js/runtime-main.7720a033.js",
+    "static/js/2.cd30b91b.chunk.js",
+    "static/css/main.95482fc2.chunk.css",
+    "static/js/main.50b5a36f.chunk.js"
   ]
 }
