@@ -156,8 +156,8 @@ class RenderApp extends Component {
             setStandardTimer={ this.setStandardTimer }
             setCustomTimer={ this.setCustomTimer }
           />
-          <Footer />
         </section>
+        <Footer />
       </main>
     );
   }
