@@ -17,11 +17,12 @@ header {
 }
 
 .main-section {
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 100px;
+  margin-bottom: 5%;
 }
 
 .action-btns-div {
