@@ -57,6 +57,7 @@ class SetupButtons extends Component {
           <div className="input-group w-3">
             <span className="input-group-text fs-5">Timer</span>
             <input
+              id="minutesInput"
               type="text"
               name="customMin"
               className="form-control fs-3"
@@ -66,6 +67,7 @@ class SetupButtons extends Component {
             />
             <input
               type="text"
+              id="secondsInput"
               name="customSec"
               className="form-control fs-3"
               placeholder="Seconds"

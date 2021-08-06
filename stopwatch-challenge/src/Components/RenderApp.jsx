@@ -46,6 +46,8 @@ class RenderApp extends Component {
       timerSecond: sec,
       timerMin: min,
     });
+    document.getElementById('minutesInput').value = '';
+    document.getElementById('secondsInput').value = '';
   }
 
   updateProgress() {
