@@ -1,10 +1,10 @@
+import React from 'react';
+import RenderApp from './Components/RenderApp';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      Cronômetro
-    </div>
+    <RenderApp />
   );
 }
 
