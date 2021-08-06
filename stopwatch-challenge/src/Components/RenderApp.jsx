@@ -7,6 +7,7 @@ import ActionButtons from './ActionButtons';
 import SetupButtons from './SetupButtons';
 import IconFantasma from './Fantamas.gif';
 import TimerComplete from './TimerComplete';
+import Footer from './Footer';
 
 class RenderApp extends Component {
   constructor(props) {
@@ -41,6 +42,7 @@ class RenderApp extends Component {
     this.setState({
       timerSecond: 0,
       timerMin: minutes,
+      progress: 0,
     });
   }
 
@@ -48,6 +50,7 @@ class RenderApp extends Component {
     this.setState({
       timerSecond: sec,
       timerMin: min,
+      progress: 0,
     });
     document.getElementById('minutesInput').value = '';
     document.getElementById('secondsInput').value = '';
@@ -113,7 +116,15 @@ class RenderApp extends Component {
 
   render() {
     const { timerSecond, timerMin, progress } = this.state;
-    const imageFantamas = <img src={ IconFantasma } alt="" className="icons-fantasma" />;
+    const END_PROGRESS = 95;
+    const imageFantamas = (
+      <img
+        src={ IconFantasma }
+        alt=""
+        className="icons-fantasma"
+        style={ { marginLeft: `${(progress === 100) ? END_PROGRESS : progress}%` } }
+      />
+    );
     let componeteTimer = (
       <Timer
         timerSecond={ timerSecond }
@@ -145,6 +156,7 @@ class RenderApp extends Component {
             setStandardTimer={ this.setStandardTimer }
             setCustomTimer={ this.setCustomTimer }
           />
+          <Footer />
         </section>
       </main>
     );

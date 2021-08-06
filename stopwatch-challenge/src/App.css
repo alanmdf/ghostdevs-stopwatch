@@ -11,27 +11,9 @@ header {
   margin: 15px;
   padding: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 25px;
-}
-
-.Icons-Header {
-  font-size: 30px;
-  color: white;
-}
-
-.settings {
-  animation: myRotation 5s infinite linear;
-}
-
-@keyframes myRotation {
-  to {
-    transform: rotate(180deg);
-  }
-  from {
-    transform: rotate(360deg);
-  }
 }
 
 .main-section {
@@ -85,5 +67,23 @@ header {
   margin: 0 25px;
 }
 .icons-fantasma {
-  width: 50px;
+  width: 40px;
 } 
+
+.Footer {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.Footer article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons {
+  color: white;
+  font-size: 45px;
+  margin: 35px;
+}
