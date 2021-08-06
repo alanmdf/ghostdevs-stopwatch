@@ -49,10 +49,12 @@ class RenderApp extends Component {
   }
 
   updateProgress() {
+    const ONE_MINUTE = 60;
     const { timerSecond, timerMin, totalSecond } = this.state;
-    const porcentagem = totalSecond - (timerMin * 60 + timerSecond);
+    const porcentagem = totalSecond - (timerMin * ONE_MINUTE + timerSecond);
     const total = (porcentagem / totalSecond) * 100;
-    const totalTrat = (total >= 0) ? total : 0;
+    const totalTrat = (total >= 0) ? Math.round(total) : 0;
+
     this.setState({ progress: totalTrat });
   }
 
@@ -82,8 +84,9 @@ class RenderApp extends Component {
   }
 
   startClock() {
+    const ONE_MINUTE = 60;
     const { timerSecond, timerMin } = this.state;
-    const totalProgress = timerMin * 60 + timerSecond;
+    const totalProgress = timerMin * ONE_MINUTE + timerSecond;
     this.setState({ totalSecond: totalProgress });
     if (timerMin === 0 && timerSecond === 0) {
       return null;
@@ -107,7 +110,13 @@ class RenderApp extends Component {
 
     return (
       <main>
-        <ProgressBar className="bar-progress" variant="info" animated now={ progress } />
+        <ProgressBar
+          className="bar-progress"
+          variant="info"
+          label={ `${progress}%` }
+          animated
+          now={ progress }
+        />
         <Header />
         <section className="main-section">
           <ActionButtons
