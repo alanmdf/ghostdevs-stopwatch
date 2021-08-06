@@ -8,12 +8,12 @@ class Footer extends Component {
         <article>
           <h5 className="text-white">Alan Freitas</h5>
           <div>
-            <a href="" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/alanfreitas/" target="_blank" rel="noreferrer">
               <i className="icons">
                 {Icons.gitHub}
               </i>
             </a>
-            <a href="" target="_blank" rel="noreferrer">
+            <a href="https://github.com/alanmdf" target="_blank" rel="noreferrer">
               <i className="icons">
                 {Icons.linkedin}
               </i>
