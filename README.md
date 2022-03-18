@@ -1,4 +1,4 @@
-# GhostDevs Stopwatch 👻⏱️
+# ReactJS - GhostDevs Stopwatch 👻⏱️
 
 # Contexto
 Esse site foi desenvolvido em conjunto com o meu colega de turma <a href="https://github.com/JVictorC">João Victor</a>.
