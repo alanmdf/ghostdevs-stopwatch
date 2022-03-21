@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/ghostdevs-stopwatch/static/css/main.95482fc2.chunk.css",
-    "main.js": "/ghostdevs-stopwatch/static/js/main.2d12b57d.chunk.js",
-    "main.js.map": "/ghostdevs-stopwatch/static/js/main.2d12b57d.chunk.js.map",
-    "runtime-main.js": "/ghostdevs-stopwatch/static/js/runtime-main.7720a033.js",
-    "runtime-main.js.map": "/ghostdevs-stopwatch/static/js/runtime-main.7720a033.js.map",
-    "static/js/2.cd30b91b.chunk.js": "/ghostdevs-stopwatch/static/js/2.cd30b91b.chunk.js",
-    "static/js/2.cd30b91b.chunk.js.map": "/ghostdevs-stopwatch/static/js/2.cd30b91b.chunk.js.map",
-    "static/js/3.19547595.chunk.js": "/ghostdevs-stopwatch/static/js/3.19547595.chunk.js",
-    "static/js/3.19547595.chunk.js.map": "/ghostdevs-stopwatch/static/js/3.19547595.chunk.js.map",
-    "index.html": "/ghostdevs-stopwatch/index.html",
-    "static/css/main.95482fc2.chunk.css.map": "/ghostdevs-stopwatch/static/css/main.95482fc2.chunk.css.map",
-    "static/js/2.cd30b91b.chunk.js.LICENSE.txt": "/ghostdevs-stopwatch/static/js/2.cd30b91b.chunk.js.LICENSE.txt",
-    "static/media/Fantamas.af9d75df.gif": "/ghostdevs-stopwatch/static/media/Fantamas.af9d75df.gif"
+    "main.css": "/reactjs-ghostdevs-stopwatch/static/css/main.95482fc2.chunk.css",
+    "main.js": "/reactjs-ghostdevs-stopwatch/static/js/main.daedc596.chunk.js",
+    "main.js.map": "/reactjs-ghostdevs-stopwatch/static/js/main.daedc596.chunk.js.map",
+    "runtime-main.js": "/reactjs-ghostdevs-stopwatch/static/js/runtime-main.6d05e69f.js",
+    "runtime-main.js.map": "/reactjs-ghostdevs-stopwatch/static/js/runtime-main.6d05e69f.js.map",
+    "static/js/2.d30fc069.chunk.js": "/reactjs-ghostdevs-stopwatch/static/js/2.d30fc069.chunk.js",
+    "static/js/2.d30fc069.chunk.js.map": "/reactjs-ghostdevs-stopwatch/static/js/2.d30fc069.chunk.js.map",
+    "static/js/3.19547595.chunk.js": "/reactjs-ghostdevs-stopwatch/static/js/3.19547595.chunk.js",
+    "static/js/3.19547595.chunk.js.map": "/reactjs-ghostdevs-stopwatch/static/js/3.19547595.chunk.js.map",
+    "index.html": "/reactjs-ghostdevs-stopwatch/index.html",
+    "static/css/main.95482fc2.chunk.css.map": "/reactjs-ghostdevs-stopwatch/static/css/main.95482fc2.chunk.css.map",
+    "static/js/2.d30fc069.chunk.js.LICENSE.txt": "/reactjs-ghostdevs-stopwatch/static/js/2.d30fc069.chunk.js.LICENSE.txt",
+    "static/media/Fantamas.af9d75df.gif": "/reactjs-ghostdevs-stopwatch/static/media/Fantamas.af9d75df.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.7720a033.js",
-    "static/js/2.cd30b91b.chunk.js",
+    "static/js/runtime-main.6d05e69f.js",
+    "static/js/2.d30fc069.chunk.js",
     "static/css/main.95482fc2.chunk.css",
-    "static/js/main.2d12b57d.chunk.js"
+    "static/js/main.daedc596.chunk.js"
   ]
 }
